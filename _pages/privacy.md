@@ -9,15 +9,15 @@ last_updated: 2026-02-17
 *Last updated: {{ page.last_updated }}*
 
 <div class="lang-selector">
-  <a href="#italiano">Italiano</a>
-  <a href="#deutsch">Deutsch</a>
-  <a href="#english">English</a>
-  <a href="#francais">Français</a>
-  <a href="#espanol">Español</a>
-  <a href="#chinese">中文</a>
+  <a href="#it">Italiano</a>
+  <a href="#de">Deutsch</a>
+  <a href="#en">English</a>
+  <a href="#fr">Français</a>
+  <a href="#es">Español</a>
+  <a href="#zh">中文</a>
 </div>
 
-## Informativa sulla Privacy {#italiano}
+## Informativa sulla Privacy {#it}
 
 **Ultimo aggiornamento:** {{ page.last_updated }}
 
@@ -53,7 +53,7 @@ Partita IVA: {{ site.legal.partita_iva }}
 
 ---
 
-## Datenschutzerklärung {#deutsch}
+## Datenschutzerklärung {#de}
 
 **Letzte Aktualisierung:** {{ page.last_updated }}
 
@@ -89,7 +89,7 @@ USt-IdNr.: {{ site.legal.partita_iva }}
 
 ---
 
-## Privacy Policy {#english}
+## Privacy Policy {#en}
 
 **Last updated:** {{ page.last_updated }}
 
@@ -125,7 +125,7 @@ VAT: {{ site.legal.partita_iva }}
 
 ---
 
-## Politique de Confidentialité {#francais}
+## Politique de Confidentialité {#fr}
 
 **Dernière mise à jour :** {{ page.last_updated }}
 
@@ -161,7 +161,7 @@ TVA : {{ site.legal.partita_iva }}
 
 ---
 
-## Política de Privacidad {#espanol}
+## Política de Privacidad {#es}
 
 **Última actualización:** {{ page.last_updated }}
 
@@ -197,7 +197,7 @@ IVA: {{ site.legal.partita_iva }}
 
 ---
 
-## 隐私政策 {#chinese}
+## 隐私政策 {#zh}
 
 **最后更新：** {{ page.last_updated }}
 

@@ -9,15 +9,15 @@ last_updated: 2026-02-17
 *Last updated: {{ page.last_updated }}*
 
 <div class="lang-selector">
-  <a href="#italiano">Italiano</a>
-  <a href="#deutsch">Deutsch</a>
-  <a href="#english">English</a>
-  <a href="#francais">Français</a>
-  <a href="#espanol">Español</a>
-  <a href="#chinese">中文</a>
+  <a href="#it">Italiano</a>
+  <a href="#de">Deutsch</a>
+  <a href="#en">English</a>
+  <a href="#fr">Français</a>
+  <a href="#es">Español</a>
+  <a href="#zh">中文</a>
 </div>
 
-## Note Legali {#italiano}
+## Note Legali {#it}
 
 Ai sensi dell'art. 7 del D.Lgs. 70/2003.
 
@@ -45,7 +45,7 @@ Questo sito può contenere link a siti web esterni. Non abbiamo alcun controllo 
 
 ---
 
-## Impressum {#deutsch}
+## Impressum {#de}
 
 Angaben gemäß D.Lgs. 70/2003 (Italien).
 
@@ -73,7 +73,7 @@ Diese Website kann Links zu externen Websites enthalten. Wir haben keinen Einflu
 
 ---
 
-## Legal Notice {#english}
+## Legal Notice {#en}
 
 In accordance with Italian Legislative Decree 70/2003, Art. 7.
 
@@ -101,7 +101,7 @@ This website may contain links to external websites. We have no control over the
 
 ---
 
-## Mentions Légales {#francais}
+## Mentions Légales {#fr}
 
 Conformément au décret législatif italien 70/2003, art. 7.
 
@@ -129,7 +129,7 @@ Ce site peut contenir des liens vers des sites web externes. Nous n'avons aucun 
 
 ---
 
-## Aviso Legal {#espanol}
+## Aviso Legal {#es}
 
 De conformidad con el Decreto Legislativo italiano 70/2003, art. 7.
 
@@ -157,7 +157,7 @@ Este sitio puede contener enlaces a sitios web externos. No tenemos control sobr
 
 ---
 
-## 法律声明 {#chinese}
+## 法律声明 {#zh}
 
 根据意大利第70/2003号法令第7条。
 

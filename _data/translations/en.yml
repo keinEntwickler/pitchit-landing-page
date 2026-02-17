@@ -1,0 +1,32 @@
+lang: en
+lang_name: English
+tagline: "Train your ear. One tone at a time."
+description: "Hear a tone, pick the note, and sharpen your ear one round at a time."
+keywords: "ear,training,music,notes,pitch,game,quiz,audio,tone,instrument,interval,melody"
+app_store_button: "Download on the App Store"
+features:
+  - title: "Quick Rounds"
+    description: "Hear a tone, pick the note, instant feedback. Even wrong answers teach, thanks to clear audio replay."
+    icon: "bolt"
+  - title: "Five Game Modes"
+    description: "Single Note, Higher/Lower, Chords, Intervals, and Melody. From relaxed learning to competitive high-score runs."
+    icon: "music"
+    coming_soon: "Intervals & Melody"
+  - title: "33 Instruments"
+    description: "10 families from Piano to Synth. Each instrument changes the challenge."
+    icon: "guitar"
+    coming_soon: true
+  - title: "Track Your Progress"
+    description: "Follow your accuracy, streaks, and difficulty progression. See your ear improve over time."
+    icon: "chart-line"
+  - title: "Privacy First"
+    description: "No ads. No tracking. No account required. Your progress stays on your devices."
+    icon: "shield-alt"
+  - title: "iCloud Sync"
+    description: "Your progress syncs privately across your devices with iCloud. No sign-up needed."
+    icon: "cloud"
+footer:
+  made_by: "Made by"
+  privacy: "Privacy Policy"
+  legal: "Legal Notice"
+  open_source: "Open Source"

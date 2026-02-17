@@ -1,0 +1,876 @@
+.landingBody {
+	background-color: #07060E !important;
+	background-image:
+		radial-gradient(1300px 900px at 15% 60%, rgba(100, 60, 180, 0.12) 0%, rgba(100, 60, 180, 0.08) 40%, transparent 72%),
+		radial-gradient(1200px 820px at 75% 20%, rgba(240, 160, 48, 0.10) 0%, rgba(240, 160, 48, 0.06) 36%, transparent 68%),
+		radial-gradient(1200px 860px at 50% 90%, rgba(140, 80, 200, 0.08) 0%, rgba(140, 80, 200, 0.06) 42%, transparent 74%),
+		radial-gradient(1100px 760px at 90% 70%, rgba(200, 140, 40, 0.10) 0%, rgba(200, 140, 40, 0.06) 38%, transparent 70%),
+		radial-gradient(1000px 700px at 30% 15%, rgba(80, 50, 160, 0.08) 0%, rgba(80, 50, 160, 0.05) 38%, transparent 68%),
+		linear-gradient(140deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 55%, rgba(255, 255, 255, 0.015) 100%);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+}
+
+.container {					// Set up the container for the site content
+	display: grid;
+	margin: auto;
+	max-width: $content-width;
+	padding-left: 15px;
+	padding-right: 15px;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 115px 876px auto auto;
+	grid-column-gap: 30px;
+	grid-template-areas:
+		"h h h h h h h h h h h h"
+		"p p p p p i i i i i i i"
+		"c c c c c c c c c c c c"
+		"f f f f f f f f f f f f";
+}
+
+.clipPathDefs {
+	position: absolute;
+}
+
+.subPageContainer {
+	grid-template-rows: 115px auto auto auto;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.container {					// Set up the container for the site content
+		grid-template-rows: 80px 811px auto auto;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+
+	.container {
+		grid-column-gap: 0px;
+		grid-template-columns: 1;
+		grid-template-rows: 115px auto auto auto auto;
+		grid-template-areas:
+			"h h h h h h h h h h h h"
+			"i i i i i i i i i i i i"
+			"p p p p p p p p p p p p"
+			"c c c c c c c c c c c c"
+			"f f f f f f f f f f f f";
+	}
+}
+
+.page {
+	margin-top: 30px;
+	margin-bottom: 70px;
+	grid-column: 3/11;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.page {
+		margin-top: 30px;
+		margin-bottom: 70px;
+		grid-column: 1/-1;
+	}
+
+}
+
+header {
+	grid-area: h;
+	display: flex;
+	margin-right: -15px;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 115px;
+	margin-right: 30px;
+}
+
+.logo > .headerName {
+	color: $header-title-color;
+	white-space: nowrap;
+	display: flex;
+	font-weight: bold;
+	margin-left: 15px;
+	text-decoration: none;
+}
+
+// App name in amber
+.appname-pitchit { color: #F0A030; }
+
+@media only screen and (max-width: 768px) {
+
+	.logo {
+		height: 80px;
+		margin-right: 0px;
+	}
+
+	.logo > .headerName {
+		display: none;
+	}
+
+}
+
+.headerIcon {
+	width: 50px;
+	height: 50px;
+	-webkit-clip-path: url(#shape);
+	clip-path: url(#shape);
+}
+
+@media only screen and (max-width: 768px) {
+
+	.divider {
+		position: relative;
+		min-width: 1px;
+		max-width: 1px;
+		background-color:rgba(127, 127, 127, 0.2);
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+}
+
+
+// Navigation Links
+.scroll {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: flex-end;
+
+	height: 115px;
+
+	white-space: nowrap;
+	overflow: visible;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.scroll {
+		height: 80px;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: 0;
+		justify-content: flex-end;
+	}
+
+}
+
+.scroll::-webkit-scrollbar {
+	display: none;
+}
+
+
+nav > ul {
+	color: #fff;
+	display: flex;
+	list-style-type: none;
+
+}
+
+nav > ul li {
+	padding-left: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+	nav > ul li {
+		padding-left: 20px;
+	}
+
+}
+
+nav > ul li:first-child {
+	padding-left: 0px;
+	padding-left: 15px;
+}
+
+nav > ul li:last-child {
+	padding-right: 15px;
+}
+
+nav > ul li a:link,
+nav > ul li a:visited {
+	text-decoration: none;
+	color: rgba($header-title-color, 0.6);
+}
+
+nav > ul li a:hover,
+nav > ul li a:active {
+	text-decoration: none;
+	color: rgba($header-title-color, 1);
+}
+
+
+
+// Sub Page Header Styling
+.subPageBody .logo > .headerName {
+	color: #000;
+}
+
+.subPageHeaderBackground nav > ul li a:link,
+.subPageHeaderBackground nav > ul li a:visited {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.subPageHeaderBackground nav > ul li a:hover,
+.subPageHeaderBackground nav > ul li a:active {
+	color: rgba(0, 0, 0, 1);
+}
+
+
+
+// App Title, Price, Description and Links
+
+.appInfo {
+	grid-area: i;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 140px;
+	align-content: flex-start;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.appInfo {
+		padding-top: 50px;
+		justify-content: center;
+	}
+
+}
+
+.appIconShadow {
+	display: flex;
+	filter: $drop-shadow;
+}
+
+.appIconLarge {
+	width: 120px;
+	height: 120px;
+	-webkit-clip-path: url(#shape120);
+	clip-path: url(#shape120);
+}
+
+.appNamePriceContainer {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	margin-left: 30px;
+}
+
+.appName {
+	color: $app-title-color;
+}
+
+.appPrice {
+	color: $app-price-color;
+	font-weight: normal;
+	margin-top: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.appNamePriceContainer {
+		width: 100%;
+		margin-left: 0px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.appName {
+		margin-top: 30px;
+		text-align: center;
+	}
+
+	.appPrice {
+		margin-top: 13px;
+		text-align: center;
+	}
+
+}
+
+.appDescriptionContainer {
+	font-size: 2.5rem;
+	font-weight: normal;
+	width: 100%;
+	align-items: flex-start;
+	margin-top: 45px;
+	flex: 0 1 auto;
+	line-height: 1.5;
+}
+
+.appDescription {
+	color: $app-description-color;
+}
+
+.appSubDescription {
+	color: rgba($app-description-color, 0.6);
+	margin-top: 16px;
+	font-size: 1.8rem;
+	line-height: 1.6;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.appDescription {
+		text-align: center;
+	}
+
+	.appSubDescription {
+		text-align: center;
+	}
+
+}
+
+.downloadButtonsContainer {
+	display: inline-block;
+	margin-top: 42px;
+	filter: $drop-shadow;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.downloadButtonsContainer {
+		text-align: center;
+	}
+
+}
+
+.playStore {
+	height: 75px;
+	margin-right: 24px;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.playStore {
+		margin-right: 24px;
+		margin-bottom: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 528px) {
+
+	.playStore {
+		margin-right: 0px;
+		margin-bottom: 24px;
+	}
+
+}
+
+.appStore {
+	height: 75px;
+}
+
+
+
+// iPhone Device Preview
+
+.iphonePreview {
+	grid-area: p;
+	background-image: url($device-color);
+	background-size: 400px auto;
+	background-repeat: no-repeat;
+	margin-top: 68px;
+}
+
+.iphoneScreen {
+	width: 349px;
+	-webkit-clip-path: url(#screenMask);
+	clip-path: url(#screenMask);
+	margin-left: 26px;
+	margin-top: 23px;
+}
+
+.videoContainer {
+	width: 349px;
+	height: 755px;
+	-webkit-clip-path: url(#screenMask);
+	clip-path: url(#screenMask);
+	margin-left: 26px;
+	margin-top: 23px;
+}
+
+.videoContainer > video {
+	width: 349px;
+	height: 755px;
+}
+
+@media only screen and (max-width: 1070px) {
+
+	.iphonePreview {
+		background-size: 370px auto;
+	}
+
+	.iphoneScreen {
+		width: 322px;
+		margin-left: 24px;
+		margin-top: 22px;
+	}
+
+	.videoContainer {
+		width: 322px;
+		height: 698px;
+		margin-left: 24px;
+		margin-top: 22px;
+	}
+
+	.videoContainer > video {
+		width: 322px;
+		height: 698px;
+	}
+
+}
+
+@media only screen and (max-width: 992px) {
+
+	.iphonePreview {
+		display: flex;
+		background-size: 260px auto;
+		background-position: center 0;
+		margin-top: 47px;
+		justify-content: center;
+		padding-bottom: 75px;
+	}
+
+	.iphoneScreen {
+		width: 226px;
+		height: 488px;
+		-webkit-clip-path: url(#screenMask);
+		clip-path: url(#screenMask);
+		margin: 0px;
+		margin-top: 17px;
+	}
+
+	.videoContainer {
+		width: 226px;
+		height: 488px;
+		margin-left: 0px;
+		margin-top: 17px;
+	}
+
+	.videoContainer > video {
+		width: 226px;
+		height: 488px;
+	}
+
+}
+
+
+// Feature List
+
+.features {
+	grid-area: c;
+	display: flex;
+	flex: 0 1 auto;
+	align-content: flex-start;
+	justify-content: flex-start;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	margin-top: 93px;
+}
+
+.feature {
+	display: flex;
+	padding-top: 63px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: calc(100%/3);
+}
+
+.feature:nth-child(-n+3) {
+    padding-top: 0px;
+}
+
+.feature:nth-child(3n) {
+	padding-right: 0px;
+}
+
+.feature:nth-child(3n+1) {
+	padding-left: 0px;
+}
+
+.iconBack {
+	color: $feature-icons-background-color;
+}
+
+.iconTop {
+	color: $feature-icons-foreground-color;
+}
+
+// Warm amber/gold spectrum for feature icons
+$feature-color-1: #F0A030; // amber — Quick Rounds
+$feature-color-2: #E8B840; // gold — Game Modes
+$feature-color-3: #D4882C; // copper — Instruments
+$feature-color-4: #F0C060; // light gold — Progress
+$feature-color-5: #C8963C; // bronze — Privacy
+$feature-color-6: #E0A848; // warm gold — iCloud
+
+.feature:nth-child(1) .iconTop { color: $feature-color-1; }
+.feature:nth-child(2) .iconTop { color: $feature-color-2; }
+.feature:nth-child(3) .iconTop { color: $feature-color-3; }
+.feature:nth-child(4) .iconTop { color: $feature-color-4; }
+.feature:nth-child(5) .iconTop { color: $feature-color-5; }
+.feature:nth-child(6) .iconTop { color: $feature-color-6; }
+
+.feature:nth-child(1) .featureText > h3 { color: $feature-color-1; }
+.feature:nth-child(2) .featureText > h3 { color: $feature-color-2; }
+.feature:nth-child(3) .featureText > h3 { color: $feature-color-3; }
+.feature:nth-child(4) .featureText > h3 { color: $feature-color-4; }
+.feature:nth-child(5) .featureText > h3 { color: $feature-color-5; }
+.feature:nth-child(6) .featureText > h3 { color: $feature-color-6; }
+
+.socialIconBack {
+	color: $social-icons-background-color;
+}
+
+.socialIconTop {
+	color: $social-icons-foreground-color;
+}
+
+// Amber social icons
+.footerIcons > a:nth-child(1) .socialIconTop { color: #F0A030; }
+.footerIcons > a:nth-child(2) .socialIconTop { color: #D4882C; }
+.footerIcons > a:nth-child(3) .socialIconTop { color: #E8B840; }
+
+// Coming Soon badge
+.coming-soon-badge {
+	display: inline-block;
+	font-size: 0.6em;
+	font-weight: 600;
+	padding: 2px 8px;
+	border-radius: 10px;
+	background: rgba(240, 160, 48, 0.15);
+	color: #F0A030;
+	border: 1px solid rgba(240, 160, 48, 0.3);
+	vertical-align: middle;
+	margin-left: 8px;
+	white-space: nowrap;
+}
+
+.featureText {
+	margin-left: 18px;
+}
+
+.featureText > h3 {
+	color: $feature-title-color;
+}
+
+.featureText > p {
+	color: $feature-text-color;
+	margin-top: 8px;
+	line-height: 1.5;
+}
+
+@media only screen and (max-width: 992px) {
+
+	.features {
+		flex-grow: 1;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 11px;
+	}
+
+	.feature {
+		display: flex;
+		padding-top: 41px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 100%;
+	}
+
+	.feature:nth-child(-n+3) {
+		padding-top: 41px;
+	}
+
+	.feature:nth-child(1) {
+		padding-top: 0px;
+	}
+
+	.feature:nth-child(3n) {
+		padding-right: 15px;
+	}
+
+	.feature:nth-child(3n+1) {
+		padding-left: 15px;
+	}
+
+}
+
+@media only screen and (max-width: 375px) {
+
+	.features {
+		flex-grow: 1;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 11px;
+	}
+
+	.feature {
+		display: flex;
+		padding-top: 41px;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+
+	.feature:nth-child(-n+3) {
+		padding-top: 41px;
+	}
+
+	.feature:nth-child(1) {
+		padding-top: 0px;
+	}
+
+	.feature:nth-child(3n) {
+		padding-right: 0px;
+	}
+
+	.feature:nth-child(3n+1) {
+		padding-left: 0px;
+	}
+
+}
+
+
+
+// Subpage footer overrides (white background pages)
+.subPageBody footer {
+	background: none;
+	border-top: 1px solid #e0e0e0;
+	margin-top: 60px;
+}
+
+.subPageBody .footerText {
+	color: #555;
+}
+
+.subPageBody .footerText a {
+	color: #F0A030 !important;
+}
+
+.subPageBody .socialIconBack {
+	color: #ddd;
+}
+
+.subPageBody .socialIconTop {
+	color: #555;
+}
+
+.subPageBody .footerIcons > a:nth-child(1) .socialIconTop { color: #F0A030; }
+.subPageBody .footerIcons > a:nth-child(2) .socialIconTop { color: #D4882C; }
+.subPageBody .footerIcons > a:nth-child(3) .socialIconTop { color: #E8B840; }
+
+.subPageBody .footerLinks a {
+	color: #555;
+}
+
+// Language pill selector
+.lang-selector {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	padding: 24px 0;
+}
+
+.lang-selector a {
+	display: inline-block;
+	padding: 8px 20px;
+	border-radius: 24px;
+	font-weight: 600;
+	font-size: 0.9em;
+	text-decoration: none;
+	background: transparent;
+	border: 2px solid;
+	transition: background 0.15s, color 0.15s, transform 0.15s;
+}
+
+.lang-selector a:hover {
+	transform: translateY(-2px);
+	color: #fff;
+}
+
+.lang-selector a:nth-child(1) { color: #F0A030; border-color: #F0A030; }
+.lang-selector a:nth-child(2) { color: #E8B840; border-color: #E8B840; }
+.lang-selector a:nth-child(3) { color: #D4882C; border-color: #D4882C; }
+.lang-selector a:nth-child(4) { color: #F0C060; border-color: #F0C060; }
+.lang-selector a:nth-child(5) { color: #C8963C; border-color: #C8963C; }
+.lang-selector a:nth-child(6) { color: #E0A848; border-color: #E0A848; }
+
+.lang-selector a:nth-child(1):hover { background: #F0A030; }
+.lang-selector a:nth-child(2):hover { background: #E8B840; }
+.lang-selector a:nth-child(3):hover { background: #D4882C; }
+.lang-selector a:nth-child(4):hover { background: #F0C060; }
+.lang-selector a:nth-child(5):hover { background: #C8963C; }
+.lang-selector a:nth-child(6):hover { background: #E0A848; }
+
+// Footer
+
+footer {
+	grid-area: f;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footerText a {
+	color: #F0A030 !important;
+	text-decoration: none;
+}
+
+.footerText {
+	color: $footer-text-color;
+	display: block;
+	line-height: 1.5;
+	width: 100%;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.footerIcons {
+	padding-bottom: 70px;
+	display: flex;
+	flex: 0 0 100%;
+	justify-content: center;
+}
+
+.footerLinks {
+	display: flex;
+	text-align: center;
+	padding-bottom: 70px;
+}
+
+.footerLinks a {
+	margin-right: 30px;
+}
+
+.footerLinks a:last-child {
+	margin-right: 0px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+	.footerLinks {
+		flex-direction: column;
+	}
+
+	.footerLinks a {
+		justify-content: stretch;
+		margin-right: 0px;
+		margin-top: 20px;
+	}
+
+	.footerLinks a:first-child {
+		margin-top: 0px;
+	}
+
+}
+
+@media only screen and (max-width: 992px) {
+
+	.footerText {
+		color: $footer-text-color;
+		display: block;
+		line-height: 1.5;
+		width: 100%;
+		text-align: center;
+		padding-top: 54px;
+		padding-bottom: 61px;
+	}
+
+	.footerIcons {
+		padding-bottom: 70px;
+		display: flex;
+	}
+
+}
+
+.hidden {
+	display: none;
+}
+
+// Language Dropdown
+.language-dropdown {
+	position: relative;
+}
+
+.language-dropdown-toggle {
+	background: none;
+	border: none;
+	color: rgba($header-title-color, 0.8);
+	cursor: pointer;
+	font-size: 1.4rem;
+	font-family: inherit;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 12px;
+	border-radius: 6px;
+	transition: background-color 0.2s;
+}
+
+.language-dropdown-toggle:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-dropdown-toggle i {
+	font-size: 0.7rem;
+	transition: transform 0.2s;
+}
+
+.language-dropdown.open .language-dropdown-toggle i {
+	transform: rotate(180deg);
+}
+
+.language-dropdown-menu {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: calc(100% + 4px);
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+	min-width: 170px;
+	z-index: 100;
+	padding: 6px 0;
+	overflow: hidden;
+}
+
+.language-dropdown.open .language-dropdown-menu {
+	display: block;
+}
+
+.language-dropdown-menu a,
+.language-dropdown-menu a:link,
+.language-dropdown-menu a:visited {
+	display: block;
+	padding: 10px 16px;
+	color: #333 !important;
+	text-decoration: none;
+	font-size: 1.4rem;
+	transition: background-color 0.15s;
+}
+
+.language-dropdown-menu a:hover {
+	background-color: #f5f5f5;
+	color: #000 !important;
+}
+
+// Sub-page dropdown styling
+.subPageHeaderBackground .language-dropdown-toggle {
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.subPageHeaderBackground .language-dropdown-toggle:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,30 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://use.fontawesome.com; font-src 'self' https://use.fontawesome.com; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+	<base target="_self">
+
+	{% assign t = site.data.translations[page.lang] | default: site.data.translations.en %}
+
+	<title class="pageTitle">{{ site.page_title }}{% if page.title %} — {{ page.title }}{% endif %}</title>
+	<meta name="description" content="{{ t.description | default: site.app_description }}">
+	{% if t.keywords %}<meta name="keywords" content="{{ t.keywords }}">{% endif %}
+
+	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
+
+	<!-- hreflang & canonical -->
+	{% include hreflang.html %}
+
+	<!-- JSON-LD -->
+	{% if page.ref %}{% include jsonld.html %}{% endif %}
+
+	<!-- Smart App Banner -->
+	{% if site.enable_smart_app_banner and site.ios_app_id != "" and site.ios_app_id %}
+		<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
+	{% endif %}
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
+	<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+</head>

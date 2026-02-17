@@ -1,0 +1,32 @@
+lang: it
+lang_name: Italiano
+tagline: "Allena il tuo orecchio. Una nota alla volta."
+description: "Ascolta un tono, scegli la nota giusta e migliora il tuo orecchio partita dopo partita."
+keywords: "orecchio,allenamento,musica,note,intonazione,gioco,quiz,audio,tono,strumento,intervallo,melodia"
+app_store_button: "Scarica dall'App Store"
+features:
+  - title: "Partite rapide"
+    description: "Ascolta un tono, scegli la nota, feedback immediato. Anche quando sbagli impari, grazie alla riproduzione audio chiara."
+    icon: "bolt"
+  - title: "Cinque modalità"
+    description: "Nota singola, Più alto/Più basso, Accordi, Intervalli e Melodia. Dall'apprendimento rilassato alle sfide a tempo."
+    icon: "music"
+    coming_soon: "Intervalli e Melodia"
+  - title: "33 strumenti"
+    description: "10 famiglie dal Pianoforte al Sintetizzatore. Ogni strumento cambia la sfida."
+    icon: "guitar"
+    coming_soon: true
+  - title: "Progresso reale"
+    description: "Segui precisione, serie e progressione di difficoltà. Guarda crescere il tuo orecchio musicale."
+    icon: "chart-line"
+  - title: "Privacy al primo posto"
+    description: "Niente pubblicità. Niente tracciamento. Nessun account necessario. I tuoi progressi restano sui tuoi dispositivi."
+    icon: "shield-alt"
+  - title: "Sincronizzazione iCloud"
+    description: "I tuoi progressi si sincronizzano in privato tramite iCloud. Nessuna registrazione necessaria."
+    icon: "cloud"
+footer:
+  made_by: "Creato da"
+  privacy: "Privacy"
+  legal: "Note legali"
+  open_source: "Codice sorgente aperto"

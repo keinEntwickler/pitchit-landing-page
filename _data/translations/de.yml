@@ -1,0 +1,32 @@
+lang: de
+lang_name: Deutsch
+tagline: "Trainiere dein Gehör. Ton für Ton."
+description: "Höre einen Ton, wähle die richtige Note und verbessere dein Gehör Runde für Runde."
+keywords: "gehör,training,musik,noten,tonhöhe,spiel,quiz,audio,ton,instrument,intervall,melodie"
+app_store_button: "Im App Store laden"
+features:
+  - title: "Kurze Runden"
+    description: "Höre einen Ton, wähle die Note, sofortiges Feedback. Auch falsche Antworten helfen dank klarer Audio-Wiederholung."
+    icon: "bolt"
+  - title: "Fünf Spielmodi"
+    description: "Einzelton, Höher/Tiefer, Akkorde, Intervalle und Melodie. Von entspanntem Lernen bis zu schnellen Highscore-Jagden."
+    icon: "music"
+    coming_soon: "Intervalle & Melodie"
+  - title: "33 Instrumente"
+    description: "10 Familien von Klavier bis Synthesizer. Jedes Instrument verändert die Herausforderung."
+    icon: "guitar"
+    coming_soon: true
+  - title: "Fortschritt verfolgen"
+    description: "Verfolge deine Genauigkeit, Streaks und Schwierigkeitsstufen. Sieh zu, wie sich dein Gehör verbessert."
+    icon: "chart-line"
+  - title: "Datenschutz an erster Stelle"
+    description: "Keine Werbung. Kein Tracking. Kein Konto nötig. Dein Fortschritt bleibt auf deinen Geräten."
+    icon: "shield-alt"
+  - title: "iCloud-Sync"
+    description: "Dein Fortschritt wird privat über iCloud synchronisiert. Keine Anmeldung nötig."
+    icon: "cloud"
+footer:
+  made_by: "Erstellt von"
+  privacy: "Datenschutz"
+  legal: "Impressum"
+  open_source: "Quelloffen"

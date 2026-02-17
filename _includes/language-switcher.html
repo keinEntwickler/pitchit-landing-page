@@ -1,0 +1,21 @@
+<div class="language-dropdown">
+  <button class="language-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+    {% for lang in site.languages %}
+      {% if lang.code == page.lang %}
+        {{ lang.flag }} {{ lang.name }}
+      {% endif %}
+    {% endfor %}
+    <i class="fas fa-chevron-down fa-xs"></i>
+  </button>
+  <div class="language-dropdown-menu">
+    {% for lang in site.languages %}
+      {% if lang.code != page.lang %}
+        {% if lang.code == site.default_lang %}
+          <a href="{{ site.baseurl }}/">{{ lang.flag }} {{ lang.name }}</a>
+        {% else %}
+          <a href="{{ site.baseurl }}/{{ lang.code }}/">{{ lang.flag }} {{ lang.name }}</a>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

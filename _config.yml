@@ -1,0 +1,119 @@
+# Page title
+page_title                                : Pitchit
+
+# App Info
+ios_app_id                                :
+ios_app_country                           : it
+
+appstore_link                             :
+playstore_link                            :
+presskit_download_link                    :
+
+app_icon                                  : assets/appicon.png
+app_name                                  : Pitchit
+app_price                                 : Free
+app_description                           : Train your ear. One tone at a time.
+
+enable_smart_app_banner                   : false
+
+# Legal Information
+legal:
+  name: "Marco Ostermeier"
+  street: "Maretschgasse 3"
+  postal_code: "39100"
+  city: "Bozen/Bolzano (BZ)"
+  country: "Italy"
+  email: "appstore-keinentwickler@pm.me"
+  partita_iva: "IT16757831009"
+  last_updated: "17 February 2026"
+
+# Information About Yourself
+your_name                                 : keinEntwickler
+your_link                                 : https://github.com/keinEntwickler
+your_city                                 :
+email_address                             : appstore-keinentwickler@pm.me
+linkedin_username                         :
+linkedin_company                          :
+facebook_username                         :
+instagram_username                        :
+twitter_username                          : keinentwickler
+github_username                           : keinEntwickler
+youtube_username                          :
+mastodon_link                             :
+
+# Base URL for GitHub Pages
+baseurl                                   : /pitchit-landing-page
+url                                       : https://keinentwickler.github.io
+
+# Supported languages
+languages:
+  - code: en
+    name: English
+    flag: "\U0001F1EC\U0001F1E7"
+  - code: de
+    name: Deutsch
+    flag: "\U0001F1E9\U0001F1EA"
+  - code: it
+    name: Italiano
+    flag: "\U0001F1EE\U0001F1F9"
+  - code: fr
+    name: "Fran\u00E7ais"
+    flag: "\U0001F1EB\U0001F1F7"
+  - code: es
+    name: "Espa\u00F1ol"
+    flag: "\U0001F1EA\U0001F1F8"
+  - code: zh-Hans
+    name: "\u4E2D\u6587"
+    flag: "\U0001F1E8\U0001F1F3"
+
+default_lang: en
+
+# Theme Settings
+topbar_color                              : "#000000"
+topbar_transparency                       : 0.1
+topbar_title_color                        : "#ffffff"
+
+device_color                              : black
+
+body_background_color                     : "#ffffff"
+
+link_color                                : "#F0A030"
+
+app_title_color                           : "#ffffff"
+app_price_color                           : "#ffffff"
+app_description_color                     : "#ffffff"
+
+feature_title_color                       : "#ffffff"
+feature_text_color                        : "#a0a0b8"
+
+feature_icons_foreground_color            : "#F0A030"
+feature_icons_background_color            : "#1c1c1c"
+
+social_icons_foreground_color             : "#a0a0b8"
+social_icons_background_color             : "#1c1c1c"
+
+footer_text_color                         : "#a0a0b8"
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :compressed
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown

@@ -1,0 +1,21 @@
+{% assign t = site.data.translations[page.lang] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "{{ site.app_name }}",
+  "description": "{{ t.description }}",
+  "operatingSystem": "iOS",
+  "applicationCategory": "GameApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.your_name }}"
+  }{% if site.ios_app_id != "" and site.ios_app_id %},
+  "downloadUrl": "https://apps.apple.com/app/id{{ site.ios_app_id }}"{% endif %}
+}
+</script>

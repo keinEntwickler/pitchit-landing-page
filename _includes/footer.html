@@ -1,0 +1,42 @@
+{% assign t = site.data.translations[page.lang] | default: site.data.translations.en %}
+
+<footer>
+	{% if site.your_name %}
+	<p class="footerText">{{ t.footer.made_by }} {% if site.your_link %}<a href="{{ site.your_link }}">{% endif %}{{ site.your_name }}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} in {{ site.your_city }}{% endif %}</p>
+	{% endif %}
+	<div class="footerIcons">
+
+			{% if site.twitter_username %}
+				<a href="https://x.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer">
+				<span class="fa-stack fa-1x">
+					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+					<i class="socialIconTop fab fa-twitter fa-stack-1x"></i>
+				</span>
+			</a>
+		{% endif %}
+
+			{% if site.github_username %}
+				<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer">
+				<span class="fa-stack fa-1x">
+					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+					<i class="socialIconTop fab fa-github fa-stack-1x"></i>
+				</span>
+			</a>
+		{% endif %}
+
+		{% if site.email_address %}
+			<a href="mailto:{{ site.email_address }}">
+				<span class="fa-stack fa-1x">
+					<i class="socialIconBack fas fa-circle fa-stack-2x"></i>
+					<i class="socialIconTop fas fa-envelope fa-stack-1x"></i>
+				</span>
+			</a>
+		{% endif %}
+
+	</div>
+	<div class="footerLinks">
+		<a href="{{ site.baseurl }}/privacy/">{{ t.footer.privacy }}</a>
+		<a href="{{ site.baseurl }}/legal/">{{ t.footer.legal }}</a>
+		<a href="{{ site.baseurl }}/open-source/">{{ t.footer.open_source | default: "Open Source" }}</a>
+	</div>
+</footer>

@@ -1,0 +1,104 @@
+// Screenshot carousel inside iPhone device frame
+// Auto-slides once (slide 1 → slide 2), then user controls via dots
+
+@keyframes sc-slide {
+  0%   { transform: translateX(0); }
+  75%  { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.screenCarousel {
+  width: 349px;
+  height: 755px;
+  -webkit-clip-path: url(#screenMask);
+  clip-path: url(#screenMask);
+  margin-left: 26px;
+  margin-top: 23px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sc-track {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  animation: sc-slide 4s ease-in-out 1 forwards;
+}
+
+.sc-track--manual {
+  animation: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sc-slide {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+// Dot indicators — outside clip-path, below the phone frame
+.sc-dots {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.sc-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s;
+}
+
+.sc-dot--active {
+  background: #fff;
+}
+
+// Responsive: 1070px
+@media only screen and (max-width: 1070px) {
+  .screenCarousel {
+    width: 322px;
+    height: 698px;
+    margin-left: 24px;
+    margin-top: 22px;
+  }
+
+  .sc-dots { width: 370px; margin-top: 26px; }
+  .sc-dot { width: 7px; height: 7px; }
+}
+
+// Responsive: 992px
+@media only screen and (max-width: 992px) {
+  .iphonePreview {
+    flex-wrap: wrap;
+  }
+
+  .screenCarousel {
+    width: 226px;
+    height: 488px;
+    margin: 0;
+    margin-top: 17px;
+  }
+
+  .sc-dots {
+    flex-basis: 100%;
+    width: auto;
+    margin-top: 20px;
+    gap: 6px;
+  }
+  .sc-dot { width: 6px; height: 6px; }
+}
+
+// Reduced motion — no auto-slide, start on slide 1
+@media (prefers-reduced-motion: reduce) {
+  .sc-track {
+    animation: none;
+  }
+}

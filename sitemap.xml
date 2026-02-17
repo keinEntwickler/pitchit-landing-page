@@ -1,0 +1,48 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English (default) -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}/" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}/" />
+    <xhtml:link rel="alternate" hreflang="de" href="{{ site.url }}{{ site.baseurl }}/de/" />
+    <xhtml:link rel="alternate" hreflang="it" href="{{ site.url }}{{ site.baseurl }}/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ site.baseurl }}/fr/" />
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ site.baseurl }}/es/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="{{ site.url }}{{ site.baseurl }}/zh-Hans/" />
+  </url>
+
+  {% for lang in site.languages %}
+  {% unless lang.code == site.default_lang %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/{{ lang.code }}/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}/" />
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ site.baseurl }}/" />
+    <xhtml:link rel="alternate" hreflang="de" href="{{ site.url }}{{ site.baseurl }}/de/" />
+    <xhtml:link rel="alternate" hreflang="it" href="{{ site.url }}{{ site.baseurl }}/it/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ site.baseurl }}/fr/" />
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ site.baseurl }}/es/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="{{ site.url }}{{ site.baseurl }}/zh-Hans/" />
+  </url>
+  {% endunless %}
+  {% endfor %}
+
+  <!-- Legal pages (single multilingual documents) -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/privacy/</loc>
+  </url>
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/legal/</loc>
+  </url>
+
+  <!-- Open Source credits -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/open-source/</loc>
+  </url>
+
+</urlset>

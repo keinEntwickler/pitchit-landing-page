@@ -41,9 +41,9 @@ github_username                           : keinEntwickler
 youtube_username                          :
 mastodon_link                             :
 
-# Base URL for GitHub Pages
-baseurl                                   : /pitchit-landing-page
-url                                       : https://keinentwickler.github.io
+# Custom domain
+baseurl                                   :
+url                                       : https://getpitch.it
 
 # Supported languages
 languages:
@@ -106,7 +106,6 @@ sass:
 exclude:
   - LICENSE
   - README.md
-  - CNAME
   - Gemfile
   - Gemfile.lock
 

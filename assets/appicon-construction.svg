@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- iOS-style rounded square background -->
+  <rect width="512" height="512" rx="112" ry="112" fill="#1a1a2e"/>
+
+  <!-- Subtle grid lines (blueprint feel) -->
+  <g stroke="#2a2a44" stroke-width="1" opacity="0.5">
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+  </g>
+
+  <!-- Construction cone -->
+  <g transform="translate(256, 260)">
+    <!-- Cone base -->
+    <rect x="-70" y="60" width="140" height="20" rx="4" fill="#F0A030"/>
+    <!-- Cone body -->
+    <polygon points="-50,60 -18,-60 18,-60 50,60" fill="#F0A030"/>
+    <!-- Cone stripes -->
+    <polygon points="-40,36 -28,-8 28,-8 40,36" fill="#1a1a2e" opacity="0.3"/>
+    <polygon points="-34,14 -24,-24 24,-24 34,14" fill="#F0A030"/>
+    <!-- Cone tip -->
+    <rect x="-12" y="-72" width="24" height="16" rx="4" fill="#E8B840"/>
+  </g>
+
+  <!-- Wrench (small, to the side) -->
+  <g transform="translate(340, 180) rotate(30)" opacity="0.6">
+    <rect x="-6" y="-40" width="12" height="60" rx="3" fill="#C8963C"/>
+    <circle cx="0" cy="-46" r="16" fill="none" stroke="#C8963C" stroke-width="10"/>
+    <circle cx="0" cy="-46" r="10" fill="#1a1a2e"/>
+  </g>
+
+  <!-- "Under Construction" text area -->
+  <text x="256" y="400" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="28" font-weight="600" fill="#F0A030" opacity="0.7">COMING SOON</text>
+</svg>

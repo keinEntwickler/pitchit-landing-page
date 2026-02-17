@@ -4,7 +4,7 @@ Landing page for **Pitchit** — train your ear, one tone at a time.
 
 Pitchit is an iOS ear-training game. Hear a tone, pick the note, and sharpen your musical ear one round at a time.
 
-Live at: [keinentwickler.github.io/pitchit-landing-page](https://keinentwickler.github.io/pitchit-landing-page/)
+Live at: [getpitch.it](https://getpitch.it)
 
 ## Languages
 
@@ -28,7 +28,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Open [localhost:4000/pitchit-landing-page/](http://localhost:4000/pitchit-landing-page/) in your browser.
+Open [localhost:4000](http://localhost:4000/) in your browser.
 
 ## Credits
 

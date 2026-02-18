@@ -27,7 +27,7 @@
                                     </clipPath>
                                 </defs>
                             </svg>
-                            <img class="appIconLarge" src="{{ site.app_icon | relative_url }}">
+                            <img class="appIconLarge" src="{{ site.app_icon | relative_url }}" alt="{{ site.app_name }} app icon">
                         </div>
                         <div class="appNamePriceContainer">
                             <h1 class="appName">
@@ -47,7 +47,7 @@
                         </div>
                         <div class="downloadButtonsContainer">
                             {% if site.appstore_link and site.appstore_link != "" %}
-                                <a class="appStoreLink" href="{{ site.appstore_link }}" target="_blank" rel="noopener noreferrer"><img class="appStore" src="{{ 'assets/appstore.png' | relative_url }}"></a>
+                                <a class="appStoreLink" href="{{ site.appstore_link }}" target="_blank" rel="noopener noreferrer"><img class="appStore" src="{{ 'assets/appstore.png' | relative_url }}" alt="{{ t.app_store_button | default: 'Download on the App Store' }}"></a>
                             {% endif %}
                         </div>
                     </div>

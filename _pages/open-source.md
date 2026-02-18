@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Open Source
+description: "Open source acknowledgements and third-party libraries used by the Pitchit iOS app and landing page."
 include_in_header: false
 lang: en
 last_updated: 2026-02-17

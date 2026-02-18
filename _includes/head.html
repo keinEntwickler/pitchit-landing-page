@@ -6,10 +6,36 @@
 	<base target="_self">
 
 	{% assign t = site.data.translations[page.lang] | default: site.data.translations.en %}
+	{% assign canonical_url = site.url | append: site.baseurl | append: page.url | replace: 'index.html', '' %}
+	{% assign page_description = page.description | default: t.description | default: site.app_description %}
+	{% assign page_title = page.seo_title | default: site.page_title %}
+	{% if page.title %}
+		{% assign page_title = page_title | append: " — " | append: page.title %}
+	{% elsif page.ref == "home" %}
+		{% assign home_title_suffix = t.meta_title | default: t.tagline | default: site.app_description %}
+		{% assign page_title = page_title | append: " — " | append: home_title_suffix %}
+	{% endif %}
+	{% assign og_image = page.og_image | default: '/assets/screenshots/chords_normal_dark.png' %}
+	{% assign og_image_url = site.url | append: site.baseurl | append: og_image %}
 
-	<title class="pageTitle">{{ site.page_title }}{% if page.title %} — {{ page.title }}{% endif %}</title>
-	<meta name="description" content="{{ t.description | default: site.app_description }}">
+	<title>{{ page_title }}</title>
+	<meta name="description" content="{{ page_description }}">
 	{% if t.keywords %}<meta name="keywords" content="{{ t.keywords }}">{% endif %}
+	<meta name="robots" content="index,follow">
+
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="{{ site.app_name }}">
+	<meta property="og:title" content="{{ page_title }}">
+	<meta property="og:description" content="{{ page_description }}">
+	<meta property="og:url" content="{{ canonical_url }}">
+	<meta property="og:image" content="{{ og_image_url }}">
+	<meta property="og:image:alt" content="{{ site.app_name }} iOS app screenshot">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ page_title }}">
+	<meta name="twitter:description" content="{{ page_description }}">
+	<meta name="twitter:image" content="{{ og_image_url }}">
+	{% if site.twitter_username %}<meta name="twitter:site" content="@{{ site.twitter_username }}">{% endif %}
 
 	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
 

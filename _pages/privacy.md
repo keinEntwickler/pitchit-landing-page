@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Privacy Policy
+description: "Privacy policy for the Pitchit iOS app and website, including data handling and in-app purchase information."
 include_in_header: false
 lang: en
 last_updated: 2026-02-17

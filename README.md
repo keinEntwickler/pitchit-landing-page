@@ -19,7 +19,7 @@ Live at: [getpitch.it](https://getpitch.it)
 
 - **Landing pages** — one per language, content from `_data/translations/`
 - **Legal pages** — single multilingual documents (Privacy Policy, Legal Notice)
-- **Open Source** — credits for Swift frameworks used in Pitchit
+- **Credits** — acknowledgements for Swift frameworks used in Pitchit
 
 ## Local Development
 

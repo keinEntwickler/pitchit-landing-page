@@ -40,9 +40,9 @@ layout: null
     <loc>{{ site.url }}{{ site.baseurl }}/legal/</loc>
   </url>
 
-  <!-- Open Source credits -->
+  <!-- Credits -->
   <url>
-    <loc>{{ site.url }}{{ site.baseurl }}/open-source/</loc>
+    <loc>{{ site.url }}{{ site.baseurl }}/credits/</loc>
   </url>
 
 </urlset>

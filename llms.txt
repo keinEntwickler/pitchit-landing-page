@@ -66,5 +66,5 @@ links:
 - landing page: https://getpitch.it/
 - privacy policy: https://getpitch.it/privacy/
 - legal notice: https://getpitch.it/legal/
-- open source credits: https://getpitch.it/open-source/
+- credits: https://getpitch.it/credits/
 - source (landing page): https://github.com/keinEntwickler/pitchit-landing-page

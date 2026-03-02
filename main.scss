@@ -4,8 +4,6 @@
 
 $body-color: {{ site.body_background_color }};
 
-$device-color: "assets/{{ site.device_color }}.png";
-
 $accent-color: {{ site.link_color }};
 
 $header-title-color: {{ site.topbar_title_color }};
@@ -30,4 +28,4 @@ $social-icons-background-color: {{ site.social_icons_background_color }};
     "base",
     "layout",
     "github-markdown",
-    "animated-screen"
+    "screenshot-gallery"
